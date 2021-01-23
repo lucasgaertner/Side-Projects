@@ -1,0 +1,14 @@
+<div>
+    <h1><a href="http://www.justwebcode.com" rel="index,follow">Just Web Code</a></h1>
+      <p>Click on Browser Back Button to Check</p>
+    </div>
+    
+    <iframe src="/index.html">
+</iframe>
+
+        <script>
+        history.pushState(null, null, location.href);
+            window.onpopstate = function () {
+                history.go(1);
+            };
+            </script>

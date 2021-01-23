@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fingerprint</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <script
+    src="https://code.jquery.com/jquery-1.9.1.js"
+    integrity="sha256-e9gNBsAcA0DBuRWbm0oZfbiCyhjLrI6bmqAl5o+ZjUA="
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <main>
+        <section class="glass">
+            <div class="dashboard">
+                <div class="user">
+                  <img src="static/images/computer.svg" alt="" />
+                  <h3 id="deviceCheck"></h3>
+                  <img src="static/images/ratio.svg" alt="" />
+                  <h3 id="RatioCheck">ratio</h3>
+                </div>
+                <div class="links">
+                  <div id="locationBox" class="link" onclick="changeTemplate('location')">
+                    <!-- <a href='https://pngtree.com/so/location-clipart'>location clipart png from pngtree.com</a> -->
+                    <img class="locationImage" src="static/images/Location_png.png" alt="" />
+                    <h2>Location</h2>
+                  </div>
+                  <div id="cookiesBox" class="link" onclick="changeTemplate('cookies')">
+                    <img class="cookieImage" src="static/images/cookies.png" alt="" />
+                    <h2>Cookies</h2>
+                  </div>
+ 
+                  <div id="storyBox" class="link" onclick="changeTemplate('story')">
+                    <img class="storyImage" src="static/images/user-profile.png" alt="" />
+                    <h2>Story</h2>
+                  </div>
+                </div>
+              </div>
+
+
+
+<!-- Templates -->
+              <div id="location" class="template">
+                <div class="status">
+                  <h1>Location</h1>
+                </div>
+                <div class="cards">
+                  <div class="card">
+                    <img class="country" src="static/images/home-24px.svg" alt="" />
+                    <div class="card-info">                 
+                    </div>
+                    <h2 id="position"></h2>
+                  </div>
+                  <div class="card">
+                    <img class="country" src="static/images/ip-address.png" alt="" />
+                    <div class="card-info">                 
+                    </div>
+                    <h2 id="ip"></h2>
+                    <pre id="details"></pre>
+                  </div>
+                  <div class="card">
+                    <img class="country" src="static/images/germany.jpg" alt="" />
+                    <div class="card-info">                 
+                    </div>
+                    <h2 id="position"></h2>
+                  </div>
+                </div>
+              </div>
+
+
+              <div id="cookies" class="template">
+                <div class="status">
+                  <h1>Cookies</h1>
+                </div>
+         
+                  <a class="story header" href="https://www.wired.com/story/europes-new-privacy-law-will-change-the-web-and-more/">Only accept first party tracking:</a>
+                </div>
+              </div>
+
+              <div id="story" class="template">
+                <div class="status">
+                  <h1>Story</h1>
+                </div>
+                <b>Mark Zuckerberg</b>: Privacy issues have always been incredibly important to people. One of our biggest responsibilities is to protect data.
+              <br>
+              <br>
+
+              
+</div>
+
+
+
+        </section>
+    </main>
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+</body>
+<script type="text/javascript" src="static/scripts/script.js"></script>
+
+<script>
+  alert("test");
+  var url = "http://ipinfo.io/json";
+  const html = (await (await fetch(url)).text());
+  alert("test");
+const doc = new DOMParser().parseFromString(html, 'text/html');
+console.log(doc.body);
+
+
+</script>
+
+</html>
